@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fra Papir til Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      background-color: #5c7cfa;
+      padding: 20px;
+      color: white;
+      border-radius: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    h2 {
+      margin-top: 5px;
+      font-size: 1.2em;
+    }
+
+    .contact, .description, .goal {
+      margin-top: 20px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #5c7cfa;
+    }
+
+    a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .file-upload {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .file-upload button {
+      background-color: #5c7cfa;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .file-upload button:hover {
+      background-color: #4b68da;
+    }
+
+    .file-upload input[type="file"] {
+      display: none;
+    }
+
+    .file-upload label {
+      font-size: 1.1em;
+      color: #5c7cfa;
+      margin-top: 10px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .file-upload label:hover {
+      color: #4b68da;
+    }
+  </style>
+</head>
+<body>
+    <img src="assets/solita.png" alt="Solita logo">
+
+  <div class="container">
+    <header>
+      <h1>Fra Papir til Data: Billedgenkendelse af håndskrift</h1>
+      <h2>Solita</h2>
+    </header>
+
+    <div class="file-upload">
+      <button id="uploadButton">Click here amk</button>
+      <input type="file" id="fileInput">
+      <label for="fileInput">Vælg en fil til upload</label>
+    </div>
+
+    <section class="contact">
+      <h3>Kontaktpersoner</h3>
+      <ul>
+        <li>
+          <strong></strong> Advisory Software Developer <br>
+          Email: <a href="mailto:cni@solita.dk">cni&#64;solita.dk</a>
+        </li>
+        <li>
+          <strong>Magnus Baggesen</strong> Software Developer <br>
+          Email: <a href="mailto:mba@solita.dk">mba&#64;solita.dk</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="description">
+      <h3>Kort beskrivelse af opgaven</h3>
+      <p>
+        Dette projekt er et teknologiprojekt, hvor der oparbejdes erfaring med machine learning og
+        billedgenkendelse. Målet er at konvertere håndskrevne dokumenter til digitale formater ved hjælp af
+        machine learning, og dermed gøre informationerne nemmere at søge og vedligeholde.
+      </p>
+      <p>
+        Projektet starter med bogstav- eller ordgenkendelse og kan udvides til andre funktioner, såsom at læse hele
+        sider og præsentere dem som PDF'er eller udvikle en hjemmeside, hvor brugere kan uploade billeder af
+        håndskrift til analyse.
+      </p>
+    </section>
+
+    <section class="goal">
+      <h3>Formålet med at løse problemet</h3>
+      <p>
+        Dette projekt giver praktisk erfaring med ny teknologi og projektstyring, inspireret af en rigtig kundecase.
+        Projektet køres i Scrum med to-ugers sprints, og der vil være ugentlige møder med Solita for at vise
+        fremdriften gennem demos.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('uploadButton').addEventListener('click', function() {
+      document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', function() {
+      if (this.files.length > 0) {
+        alert('Fil valgt: ' + this.files[0].name);
+      }
+    });
+  </script>
+</body>
+</html>
